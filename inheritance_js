@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Inheritance means thata particular class can inherit the properties and the methods of
+    another class(parent class)
+
+</body>
+<script>
+    class animals {
+        alive = true;
+        eat() {
+            console.log(`${this.name} is eating!! Please dont disturb`);
+        }
+        sleep() {
+            console.log(`${this.name} is sleeping`);
+        }
+    }
+    class rabbit extends animals {
+        name = "rabbit"
+        running() {
+            console.log(`${this.name} is running`);
+        }
+    }
+    class fish extends animals {
+        name = "fish"
+        swimming() {
+            console.log(`${this.name} is swimming`);
+        }
+    }
+    class hawk extends animals {
+        name = "hawk"
+        flying() {
+            console.log(`${this.name} is flying`);
+        }
+    }
+    // Creating objects
+    const rabbit1 = new rabbit();
+    const fish1 = new fish();
+    const hawk1 = new hawk();
+    rabbit1.eat();
+    rabbit1.running();
+    rabbit1.sleep();
+    fish1.sleep();
+    fish1.swimming();
+    hawk1.eat();
+    hawk1.flying();
+
+
+
+
+
+
+
+</script>
+
+</html>
