@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dm.css">
+</head>
+
+<body>
+    <h1>We are building an incremental counter</h1>
+    <p>In this incremetal counter the incremental label with change according to the specified instruction</p>
+    <label id="counterlabel">0</label>
+    <section>
+        <button id="increasebtn">Increase</button>
+        <button id="resetbtn">Reset</button>
+        <button id="decreasebtn">Decrease</button>
+
+    </section>
+    <h2>CSS Manipulation</h2>
+    <div class="paragraphm">
+        <p>Hello World</p>
+        Here in this program we are learning to manipulate the CSS of the document through
+        DOM.It can be very much effective for users to make some changes.Nice to write up some things
+        Just writing gibberish things to make this long.
+        <div>Good Morning Sir!! It is a lovely morning</div>
+
+
+    </div>
+    <p id="main">Code World</p>
+    <div class="paragraphm">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet animi expedita a facilis beatae commodi
+            totam est. Corporis error magnam enim aut optio cumque, pariatur vitae maiores officia iusto?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est temporibus minus reiciendis aperiam sapiente,
+            ad deleniti suscipit dolor cumque quaerat accusantium neque? Aut exercitationem at facere fuga dolore
+            provident? Minima!
+
+        </p>
+    </div>
+    <button id="pressbtn">Press here</button>
+    <p id="id1">Sachin tendulkar is th best batsman of this generation</p>
+    <ul>
+        <li>Apple</li>
+        <li>banana</li>
+        <li>mango</li>
+    </ul>
+
+
+
+
+
+
+</body>
+<script>
+    let counter = 0;
+    document.getElementById("increasebtn").onclick = function () {
+        counter += 1;
+        document.getElementById("counterlabel").innerHTML = counter;
+    }
+    document.getElementById("resetbtn").onclick = function () {
+        counter = 0;
+        document.getElementById("counterlabel").innerHTML = counter;
+
+
+    }
+    document.getElementById("decreasebtn").onclick = function () {
+        counter += -1;
+        document.getElementById("counterlabel").innerHTML = counter;
+    }
+    document.getElementsByClassName("paragraphm")[0].style.color = "red";
+    document.getElementsByClassName("paragraphm")[1].style.backgroundColor = "orange";
+    document.getElementById("main").style.fontFamily = "Arial";
+    document.getElementById("main").style.fontSize = "large";
+    document.getElementById("pressbtn").onclick = function () {
+        document.getElementById("id1").style.backgroundColor = "purple";
+    }
+    const listItems = document.getElementsByTagName("li");
+
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].style.color = "green";
+    }
+
+
+
+
+</script>
+
+</html>
