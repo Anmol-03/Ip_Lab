@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>We are building an incremental counter</h1>
+    <h1 id="title">We are building an incremental counter</h1>
     <p>In this incremetal counter the incremental label with change according to the specified instruction</p>
     <label id="counterlabel">0</label>
     <section>
@@ -46,6 +46,10 @@
         <li>banana</li>
         <li>mango</li>
     </ul>
+    <div class="desserts">ice-cream</div>
+    <div class="desserts">shakes</div>
+    <div class="desserts">sweets</div>
+
 
 
 
@@ -78,9 +82,19 @@
     }
     const listItems = document.getElementsByTagName("li");
 
-    for (let i = 0; i < listItems.length; i++) {
-        listItems[i].style.color = "green";
+    let listitems = document.getElementsByTagName("li");
+    for (i = 0; i < listitems.length; i++) {
+        listitems[i].style.color = "green";
     }
+    let element23 = document.querySelector("#title");
+    element23.style.color = "red";
+    let elements123 = document.querySelectorAll(".desserts");
+    for (let i = 0; i < elements123.length; i++) {
+        elements123[i].style.color = "yellow";
+
+    }
+
+
 
 
 
